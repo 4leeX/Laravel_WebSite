@@ -1,5 +1,6 @@
 <?php
 
+use GuzzleHttp\Psr7\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,12 +16,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 Route::get('/contact', function (){
 	return view('contact');
-});
+})->name('about');
 
 Route::get('/about', function (){
 	return view('about');
-});
+})->name('about');
+
+Route::post('contact/submit', 'ContactController@submit')->name('contact-form-submit');
