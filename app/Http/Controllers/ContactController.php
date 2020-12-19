@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class ContactController extends Controller
 {
     public function submit(){
-        return 'That is OK';
+        return 'OK baby';
     }
 }
