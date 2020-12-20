@@ -15,12 +15,16 @@
 	</style>
 
 </head>
+
 <body>
 	@include('inc.navbar')
 	<div class="container">
 	@if (Request::is('/'))
 		@include('inc.showcase')
 	@endif
+
+	@include('inc.messages')
+
 		<div class="row">
 			<div class="col-md-8 col-lg-8">
 				@yield('content')
@@ -34,13 +38,6 @@
 	<footer id="footer" class="text-center">
 		<p>Copyright 2020 &copy; 4leex</p>
 	</footer>
-
-
-
-
-
-
-
 
 
 
