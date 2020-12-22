@@ -21,6 +21,7 @@ class ContactController extends Controller
 
     public function getMessages(){
         $messages = Message::all();
-        dd($messages);
+        
+        return view('messages',['messages' => $messages]);
     }
 }
